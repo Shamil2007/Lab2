@@ -1,3 +1,15 @@
+const headers = document.querySelectorAll('.left-header');
+
+headers.forEach(header => {
+  header.addEventListener('click', () => {
+    const content = header.nextElementSibling;
+    if (content && content.classList.contains('section-content')) {
+      content.classList.toggle('active');
+    }
+  });
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const inputs = [
       { inputId: 'addContact', listClass: 'contact-list' },

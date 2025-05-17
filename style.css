@@ -34,18 +34,14 @@ body {
   border-radius: 3px;
 }
 
-.left-header:hover {
-  background: #3a4f66;
-  padding-left: 10px;
-}
-
 .section-content {
   max-height: 0;
   overflow: hidden;
+  transition: max-height 0.3s ease-out;
 }
 
-.section:hover .section-content {
-  max-height: 500px; 
+.section-content.active {
+  max-height: 500px;
 }
 
 #position {
